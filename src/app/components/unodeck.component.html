@@ -1,0 +1,14 @@
+<button type="button" (click)="showHand()"> Deal Cards</button> <button type="button" (click)="restart()">Restart</button>
+<!-- <p><code> {{players}} Read from UNODeck Component</code> </p> -->
+
+<table>
+    <tr *ngFor="let j of game">
+        <td>
+            <p> Player {{j.PlayerNum}} </p>
+        </td>
+          <td *ngFor="let k of j.hand">
+            <img [src]="k.image" width="28px">
+            <code></code>
+        </td>  
+    </tr>
+</table>

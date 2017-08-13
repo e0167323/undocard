@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('unocard App', () => {
+describe('uno App', () => {
   let page: AppPage;
 
   beforeEach(() => {

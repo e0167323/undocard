@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Card, UNODeck } from './Model/Card';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  // deckNew: Card[]= [];
+  @Input() playerCount: number;
+  @Input() counter: number;
+
+  ngOnInit() {
+    this.counter = 2;
+  }
+
+  ngOnDestroy()
+  { }
+
+  public increment(): void {
+    if (this.counter == 7) {
+      return;
+    }
+    this.counter++;
+    console.log("Count is %d", this.counter);
+  }
+
+  public decrement(): void {
+
+    if (this.counter <= 2) {
+      return;
+    }
+    this.counter--;
+    console.log("Count is %d", this.counter);
+  }
 }
