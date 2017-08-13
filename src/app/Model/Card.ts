@@ -91,5 +91,8 @@ export class UNODeck {
         }
     }
 
+    public take(): Card {
+        return (this.cardList.pop());
+    }
 
 }
