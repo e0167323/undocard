@@ -21,13 +21,12 @@ export class Player {
 }
 
 export class UNODeck {
-    // c0 is red, c1 is yellow, c2 is green, c3 is blue, c4 are wild cards
+   
     private static COLOURS: string[] = ["c0", "c1", "c2", "c3"];
 
     public cardList: Card[] = [];
     constructor() {
-        //create the deck
-        //create maindeck
+       
         let prefix: string = "0";
 
         for (let i = 0; i < 2; i++) {
@@ -51,9 +50,9 @@ export class UNODeck {
             }
         }
 
-        // create Wild Cards and Zero value Cards
+        
         for (let m = 0; m < 4; m++) {
-            // prefix = prefix + m;
+            
             this.cardList.push(
                 {
                     value: 13,
@@ -92,8 +91,5 @@ export class UNODeck {
         }
     }
 
-    public take(): Card {
-        return (this.cardList.pop());
-    }
 
 }
