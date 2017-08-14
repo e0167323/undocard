@@ -78,6 +78,10 @@ export class UNODeck {
         }
     }
 
+    public take(): Card {
+        return (this.cardList.pop());
+    }
+
     public shuffle(times: number): void {
         for (let c = 0; c < times; c++) {
             let temp: Card;
@@ -89,10 +93,6 @@ export class UNODeck {
                 this.cardList[randNum] = temp;
             }
         }
-    }
-
-    public take(): Card {
-        return (this.cardList.pop());
-    }
+    }   
 
 }
